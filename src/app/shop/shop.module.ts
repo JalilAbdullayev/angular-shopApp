@@ -3,11 +3,13 @@ import {ModelModule} from "../model/model.module";
 import {ShopComponent} from './shop.component';
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
-    ShopComponent
+    ShopComponent,
+    NavbarComponent
   ],
   imports: [ModelModule, BrowserModule, FormsModule],
   exports: [ShopComponent]
