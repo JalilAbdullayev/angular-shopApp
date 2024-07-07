@@ -5,49 +5,56 @@
       "name": "Samsung Galaxy S5",
       "price": 1000,
       "imageUrl": "1.jpg",
-      "description": "average"
+      "description": "average",
+      "category": "Phone"
     },
     {
       "id": 2,
       "name": "Samsung Galaxy S6",
       "price": 2000,
       "imageUrl": "2.jpg",
-      "description": "good"
+      "description": "good",
+      "category": "Phone"
     },
     {
       "id": 3,
       "name": "Samsung Galaxy S7",
       "price": 3000,
       "imageUrl": "3.jpg",
-      "description": "fine"
+      "description": "fine",
+      "category": "Phone"
     },
     {
       "id": 4,
       "name": "Samsung Galaxy S8",
       "price": 4000,
       "imageUrl": "4.jpg",
-      "description": "average"
+      "description": "average",
+      "category": "Phone"
     },
     {
       "id": 5,
       "name": "Samsung Galaxy S9",
       "price": 5000,
       "imageUrl": "5.jpg",
-      "description": "average"
+      "description": "average",
+      "category": "Phone"
     },
     {
       "id": 6,
       "name": "Samsung Galaxy S10",
       "price": 6000,
       "imageUrl": "6.jpg",
-      "description": "average"
+      "description": "average",
+      "category": "Electronic"
     },
     {
       "id": 7,
       "name": "Samsung Galaxy S11",
       "price": 7000,
       "imageUrl": "7.jpg",
-      "description": "average"
+      "description": "average",
+      "category": "Electronic"
     }
   ],
   "categories": [
