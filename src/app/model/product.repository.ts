@@ -7,15 +7,19 @@ export class ProductRepository implements OnInit {
   private products: Product[] = [];
 
   constructor(private restService: RestService) {
-  }
-
-  ngOnInit() {
-    this.products = this.restService
+    this.restService
       .getProducts()
       .subscribe(products => this.products = products);
   }
 
+  ngOnInit() {
+  }
+
   getProduct(id: number): Product {
-    return this.products.find(i => i.id === id);
+    return <Product>this.products.find(i => i.id === id);
+  }
+
+  getProducts(): Product[] {
+    return this.products;
   }
 }

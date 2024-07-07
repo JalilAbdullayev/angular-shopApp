@@ -6,7 +6,7 @@ import {Category} from "./category.model";
 
 @Injectable()
 export class RestService {
-  baseUrl: string = 'http://localhost:3500';
+  baseUrl: string = 'http://localhost:3500/';
 
   constructor(private http: HttpClient) {
   }
