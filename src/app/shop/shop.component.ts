@@ -22,6 +22,17 @@ export class ShopComponent {
     return this.productRepository.getProducts(this.selectedCategory).slice(index, index + this.productsPerPage);
   }
 
+  get pageNumbers(): number[] {
+    return Array(Math.ceil(this.productRepository
+      .getProducts(this.selectedCategory).length / this.productsPerPage))
+      .fill(0)
+      .map((a, i) => i + 1);
+  }
+
+  changePage(p: number) {
+    this.selectedPage = p;
+  }
+
   get categories(): Category[] {
     return this.categoryRepository.getCategories();
   }
