@@ -3,6 +3,7 @@ import {ProductRepository} from "../model/product.repository";
 import {CategoryRepository} from "../model/category.repository";
 import {Product} from "../model/product.model";
 import {Category} from "../model/category.model";
+import {Cart} from "../model/cart.model";
 
 @Component({
   selector: 'shop',
@@ -14,7 +15,7 @@ export class ShopComponent {
   public productsPerPage: number = 3;
   public selectedPage: number = 1;
 
-  constructor(private productRepository: ProductRepository, private categoryRepository: CategoryRepository) {
+  constructor(private productRepository: ProductRepository, private categoryRepository: CategoryRepository, private cart: Cart) {
   }
 
   get products(): Product[] {
@@ -39,5 +40,9 @@ export class ShopComponent {
 
   changeCategory(newCategory?: Category) {
     this.selectedCategory = newCategory;
+  }
+
+  addProductToCart(product: Product) {
+    this.cart.addItem(product);
   }
 }

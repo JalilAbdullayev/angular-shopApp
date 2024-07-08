@@ -1,0 +1,9 @@
+<div class="alert alert-success">
+  <span *ngIf="cart.itemCount > 0">
+  {{ cart.itemCount }} items in cart <br/>
+  Total: {{ cart.total }} <i class="fa-solid fa-manat-sign"></i>
+  </span>
+  <span *ngIf="cart.itemCount == 0">
+    Cart is empty
+  </span>
+</div>

@@ -1,7 +1,9 @@
 import {Product} from "./product.model";
 import {Injectable} from "@angular/core";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class Cart {
   public items: CartItem[] = [];
   public itemCount: number = 0;
@@ -32,7 +34,7 @@ export class Cart {
 
     this.items.forEach(item => {
       this.itemCount += item.quantity;
-      this.total += item.quantity * item.product.price;
+      this.total += item.quantity * (item.product.price ?? 0);
     });
   }
 
