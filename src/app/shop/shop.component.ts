@@ -4,6 +4,7 @@ import {CategoryRepository} from "../model/category.repository";
 import {Product} from "../model/product.model";
 import {Category} from "../model/category.model";
 import {Cart} from "../model/cart.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'shop',
@@ -15,7 +16,10 @@ export class ShopComponent {
   public productsPerPage: number = 3;
   public selectedPage: number = 1;
 
-  constructor(private productRepository: ProductRepository, private categoryRepository: CategoryRepository, private cart: Cart) {
+  constructor(private productRepository: ProductRepository,
+              private categoryRepository: CategoryRepository,
+              private cart: Cart,
+              private router: Router) {
   }
 
   get products(): Product[] {
@@ -44,5 +48,6 @@ export class ShopComponent {
 
   addProductToCart(product: Product) {
     this.cart.addItem(product);
+    this.router.navigateByUrl('/cart');
   }
 }
