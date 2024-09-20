@@ -10,7 +10,7 @@ import {Category} from "../model/category.model";
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {
-  public selectedCategory: Category = null;
+  public selectedCategory?: Category;
   public productsPerPage: number = 3;
   public selectedPage: number = 1;
 
@@ -28,5 +28,14 @@ export class ShopComponent {
 
   changeCategory(newCategory?: Category) {
     return this.selectedCategory = newCategory;
+  }
+
+  get pageNumbers(): number[] {
+    return Array(Math.ceil(this.productRepository.getProducts(this.selectedCategory).length / this.productsPerPage))
+      .fill(0).map((a, i) => i + 1);
+  }
+
+  changePage(p: number) {
+    this.selectedPage = p;
   }
 }
