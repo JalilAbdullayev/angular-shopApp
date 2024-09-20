@@ -1,16 +1,14 @@
 <navbar></navbar>
-<div class="container pt-5 mb-5">
+<div class="container my-6">
   <div class="row">
     <div class="col-3">
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">
-          Category 1
+        <a href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+          All Categories
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          Category 2
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          Category 3
+        <a *ngFor="let c of categories" (click)="changeCategory(c)" href="#" [class.active]="c == selectedCategory"
+           class="list-group-item list-group-item-action">
+          {{ c.name }}
         </a>
       </div>
     </div>
