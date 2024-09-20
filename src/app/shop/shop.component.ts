@@ -11,12 +11,15 @@ import {Category} from "../model/category.model";
 })
 export class ShopComponent {
   public selectedCategory: Category = null;
+  public productsPerPage: number = 3;
+  public selectedPage: number = 1;
 
   constructor(private productRepository: ProductRepository, private categoryRepository: CategoryRepository) {
   }
 
   get products(): Product[] {
-    return this.productRepository.getProducts(this.selectedCategory);
+    let index = (this.selectedPage - 1) * this.productsPerPage;
+    return this.productRepository.getProducts(this.selectedCategory).slice(index, index + this.productsPerPage);
   }
 
   get categories(): Category[] {

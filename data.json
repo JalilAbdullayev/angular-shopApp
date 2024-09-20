@@ -23,6 +23,78 @@
       "imageUrl": "https://picsum.photos/200/300",
       "description": "Product 3 description",
       "category": "Category 3"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 4000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 4 description",
+      "category": "Category 1"
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "price": 5000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 5 description",
+      "category": "Category 2"
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "price": 6000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 6 description",
+      "category": "Category 3"
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "price": 7000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 7 description",
+      "category": "Category 1"
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "price": 8000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 8 description",
+      "category": "Category 2"
+    },
+    {
+      "id": 9,
+      "name": "Product 9",
+      "price": 9000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 9 description",
+      "category": "Category 3"
+    },
+    {
+      "id": 10,
+      "name": "Product 10",
+      "price": 10000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 10 description",
+      "category": "Category 1"
+    },
+    {
+      "id": 11,
+      "name": "Product 11",
+      "price": 11000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 11 description",
+      "category": "Category 2"
+    },
+    {
+      "id": 12,
+      "name": "Product 12",
+      "price": 12000,
+      "imageUrl": "https://picsum.photos/200/300",
+      "description": "Product 12 description",
+      "category": "Category 3"
     }
   ],
   "categories": [
