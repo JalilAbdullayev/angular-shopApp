@@ -5,21 +5,24 @@
       "name": "Product 1",
       "price": 1000,
       "imageUrl": "https://picsum.photos/200/300",
-      "description": "Product 1 description"
+      "description": "Product 1 description",
+      "category": "Category 1"
     },
     {
       "id": 2,
       "name": "Product 2",
       "price": 2000,
       "imageUrl": "https://picsum.photos/200/300",
-      "description": "Product 2 description"
+      "description": "Product 2 description",
+      "category": "Category 2"
     },
     {
       "id": 3,
       "name": "Product 3",
       "price": 3000,
       "imageUrl": "https://picsum.photos/200/300",
-      "description": "Product 3 description"
+      "description": "Product 3 description",
+      "category": "Category 3"
     }
   ],
   "categories": [
