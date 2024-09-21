@@ -1,3 +1,69 @@
-<div class="alert alert-success">
-  Checkout component
+<navbar></navbar>
+<div class="container my-6">
+  <div *ngIf="orderSent" class="m-2 text-center">
+    <h2>
+      Thank you for your order.
+    </h2>
+    <p>
+      Your order is being processed.
+    </p>
+    <button routerLink="/shop" class="btn btn-primary">
+      Continue Shopping
+    </button>
+  </div>
+  <form *ngIf="!orderSent" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
+    <div class="form-group">
+      <label>
+        Name
+      </label>
+      <input type="text" class="form-control" #name="ngModel" [(ngModel)]="order.name" name="name" required/>
+      <span *ngIf="submitted && name.invalid" class="text-danger">
+        Name is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label>
+        Address
+      </label>
+      <input type="text" class="form-control" #address="ngModel" [(ngModel)]="order.address" name="address" required/>
+      <span *ngIf="submitted && address.invalid" class="text-danger">
+        Address is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label>
+        City
+      </label>
+      <input type="text" class="form-control" #city="ngModel" [(ngModel)]="order.city" name="city" required/>
+      <span *ngIf="submitted && city.invalid" class="text-danger">
+        City is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label>
+        Phone
+      </label>
+      <input type="tel" class="form-control" #phone="ngModel" [(ngModel)]="order.phone" name="phone" required/>
+      <span *ngIf="submitted && phone.invalid" class="text-danger">
+        Phone number is required
+      </span>
+    </div>
+    <div class="form-group">
+      <label>
+        E-mail
+      </label>
+      <input type="email" class="form-control" #email="ngModel" [(ngModel)]="order.email" name="email" required/>
+      <span *ngIf="submitted && email.invalid" class="text-danger">
+        E-mail is required
+      </span>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">
+        Checkout
+      </button>
+      <button class="btn btn-primary ms-2" routerLink="/shop">
+        Continue Shopping
+      </button>
+    </div>
+  </form>
 </div>
