@@ -1,7 +1,7 @@
 <div class="alert alert-success">
   <span *ngIf="cart.itemCount > 0">
   You have {{ cart.itemCount }} items in your cart. <br/>
-  Total: {{ cart.total | currency }}
+  Total: {{ cart.total }} <i class="fa-solid fa-manat-sign"></i>
 </span>
   <span *ngIf="cart.itemCount == 0">
     Your cart is empty.

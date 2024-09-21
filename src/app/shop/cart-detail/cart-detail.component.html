@@ -36,7 +36,8 @@
             <td>
               {{ item.product.price }} <i class="fa-solid fa-manat-sign"></i>
             <td>
-              {{ item.quantity }}
+              <input type="number" class="form-control w-25" [value]="item.quantity" #quantity
+                     (change)="cart.updateQuantity(item.product, parseFloat(quantity.value))"/>
             </td>
             <td>
               {{ item.quantity * item.product.price }} <i class="fa-solid fa-manat-sign"></i>
