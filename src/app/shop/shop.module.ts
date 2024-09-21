@@ -8,6 +8,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {CartSummaryComponent} from './cart-summary/cart-summary.component';
 import {CartDetailComponent} from './cart-detail/cart-detail.component';
 import {CheckoutComponent} from './checkout/checkout.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {CheckoutComponent} from './checkout/checkout.component';
     CommonModule,
     ModelModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     ShopComponent,

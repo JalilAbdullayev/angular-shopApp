@@ -1,3 +1,92 @@
-<div class="alert alert-success">
-  Cart detail component
+<navbar></navbar>
+<div class="container my-6">
+  <h1 class="mb-2">
+    Cart
+  </h1>
+  <div class="row">
+    <div class="col-8">
+      <ng-container *ngIf="cart.itemCount > 0">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th></th>
+            <th>
+              Product
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Total
+            </th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of cart.items">
+            <td>
+              <img src="{{ item.product.imageUrl }}" alt=""/>
+            </td>
+            <td>
+              {{ item.product.name }}
+            </td>
+            <td>
+              {{ item.product.price }} <i class="fa-solid fa-manat-sign"></i>
+            <td>
+              {{ item.quantity }}
+            </td>
+            <td>
+              {{ item.quantity * item.product.price }} <i class="fa-solid fa-manat-sign"></i>
+            </td>
+            <td>
+              <button (click)="cart.removeItem(item.product.id)" class="btn btn-danger btn-sm">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </ng-container>
+      <ng-container *ngIf="cart.itemCount == 0">
+        <div class="alert alert-warning mt-3">
+          Your cart is empty.
+        </div>
+        <button routerLink="/shop" class="btn btn-link p-0">
+          Continue Shopping
+        </button>
+      </ng-container>
+    </div>
+    <div class="col-4">
+      <ng-container *ngIf="cart.itemCount > 0">
+        <div class="text-left">
+          <h4>
+            Cart Summary
+          </h4>
+        </div>
+        <table class="table">
+          <tbody>
+          <tr>
+            <th>
+              Total
+            </th>
+            <td>
+              {{ cart.total }} <i class="fa-solid fa-manat-sign"></i>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <div>
+          <button routerLink="/shop" class="btn btn-primary btn-sm">
+            Continue Shopping
+          </button>
+          <button routerLink="/checkout" class="btn btn-primary btn-sm ms-2">
+            Checkout
+          </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
 </div>

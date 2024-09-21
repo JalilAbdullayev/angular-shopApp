@@ -4,13 +4,13 @@
     <div class="col-3">
       <cart-summary></cart-summary>
       <div class="list-group">
-        <a href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+        <button (click)="changeCategory()" class="list-group-item list-group-item-action">
           All Categories
-        </a>
-        <a *ngFor="let c of categories" (click)="changeCategory(c)" href="#" [class.active]="c == selectedCategory"
+        </button>
+        <button *ngFor="let c of categories" (click)="changeCategory(c)" [class.active]="c == selectedCategory"
            class="list-group-item list-group-item-action">
           {{ c.name }}
-        </a>
+        </button>
       </div>
     </div>
     <div class="col-9">
