@@ -9,6 +9,8 @@ import {CartSummaryComponent} from './cart-summary/cart-summary.component';
 import {CartDetailComponent} from './cart-detail/cart-detail.component';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {RouterModule} from "@angular/router";
+import { ProductListComponent } from './product-list/product-list.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {RouterModule} from "@angular/router";
     NavbarComponent,
     CartSummaryComponent,
     CartDetailComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListComponent,
+    CategoryListComponent
   ],
   imports: [
     CommonModule,
