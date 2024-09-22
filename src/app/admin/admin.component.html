@@ -1,3 +1,22 @@
-<div class="bg-primary p-2 text-white">
-  Admin Placeholder
+<div class="container-fluid">
+  <div class="row">
+    <div class="bg-primary p-2 text-white">
+      Admin Panel
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="d-grid">
+        <button class="btn btn-outline-info" routerLink="/shop">
+          Shop
+        </button>
+        <button class="btn btn-outline-danger" (click)="logout()">
+          Logout
+        </button>
+      </div>
+    </div>
+    <div class="col-9">
+
+    </div>
+  </div>
 </div>
