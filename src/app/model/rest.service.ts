@@ -49,6 +49,30 @@ export class RestService {
     })
   }
 
+  addCategory(category: Category): Observable<Category> {
+    return this.http.post<Category>(this.baseUrl + 'categories', category, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer<${this.token}>`
+      })
+    })
+  }
+
+  updateCategory(category: Category): Observable<Category> {
+    return this.http.put<Category>(this.baseUrl + 'categories/' + category.id, category, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer<${this.token}>`
+      })
+    })
+  }
+
+  deleteCategory(category: Category): Observable<Category> {
+    return this.http.delete<Category>(this.baseUrl + 'categories/' + category.id, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer<${this.token}>`
+      })
+    })
+  }
+
   authentication(username: string, password: string): Observable<boolean> {
     return this.http.post<any>(this.baseUrl + 'login', {
       username: username,
