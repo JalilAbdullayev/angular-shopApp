@@ -16,6 +16,6 @@ export class ProductListComponent {
   }
 
   deleteProduct(product: Product) {
-
+    this.productRepository.deleteProduct(product);
   }
 }

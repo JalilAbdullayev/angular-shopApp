@@ -27,7 +27,12 @@ export class ProductRepository {
       this.restService.addProduct(product).subscribe(p => this.products.push(p))
     } else {
       this.restService.updateProduct(product)
-        .subscribe(p => this.products.splice(this.products.findIndex(p => p.id == product.id), 1, product))
+        .subscribe(p => this.products.splice(this.products.findIndex(p => p.id === product.id), 1, product))
     }
+  }
+
+  deleteProduct(product: Product) {
+    this.restService.deleteProduct(product)
+      .subscribe(p => this.products.splice(this.products.findIndex(p => p.id === product.id), 1));
   }
 }
