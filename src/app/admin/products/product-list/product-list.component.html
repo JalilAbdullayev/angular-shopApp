@@ -23,7 +23,7 @@
       {{ p.price }} <i class="fa-solid fa-manat-sign"></i>
     </td>
     <td>
-      <button class="btn btn-warning btn-sm" routerLink="['/admin/main/products/edit', p.id]">
+      <button class="btn btn-warning btn-sm" [routerLink]="['/admin/main/products/edit', p.id]">
         Edit
       </button>
       <button class="btn btn-danger btn-sm ms-1" (click)="deleteProduct(p)">
@@ -33,3 +33,6 @@
   </tr>
   </tbody>
 </table>
+<button class="btn btn-primary" routerLink="/admin/main/products/create">
+  Add Product
+</button>
