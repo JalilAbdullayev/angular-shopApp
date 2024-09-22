@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ProductRepository} from "../../../model/product.repository";
+import {Product} from "../../../model/product.model";
 
 @Component({
   selector: 'app-product-list',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
+  constructor(private productRepository: ProductRepository) {
+  }
 
+  getProducts(): Product[] {
+    return this.productRepository.getProducts();
+  }
+
+  deleteProduct(product: Product) {
+
+  }
 }
