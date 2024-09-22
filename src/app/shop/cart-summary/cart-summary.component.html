@@ -3,7 +3,7 @@
   You have {{ cart.itemCount }} items in your cart. <br/>
   Total: {{ cart.total }} <i class="fa-solid fa-manat-sign"></i>
 </span>
-  <span *ngIf="cart.itemCount == 0">
+  <span *ngIf="cart.itemCount === 0">
     Your cart is empty.
   </span>
 </div>

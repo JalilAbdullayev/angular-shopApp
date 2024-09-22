@@ -9,7 +9,7 @@ export class Cart {
 
   addItem(product: Product, quantity: number = 1) {
     let item = this.items.find(i => i.product.id === product.id);
-    if (item != undefined) {
+    if (item !== undefined) {
       item.quantity += quantity;
     } else {
       this.items.push(new CartItem(product, quantity));
@@ -28,7 +28,7 @@ export class Cart {
 
   updateQuantity(product: Product, quantity: number) {
     let item = this.items.find(i => i.product.id === product.id);
-    if (item != undefined) {
+    if (item !== undefined) {
       item.quantity = quantity;
     }
     this.calculate();

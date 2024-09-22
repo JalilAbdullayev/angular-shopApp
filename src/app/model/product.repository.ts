@@ -20,7 +20,7 @@ export class ProductRepository implements OnInit {
 
   getProducts(category?: Category): Product[] {
     if (category) {
-      return this.products.filter(p => p.category == category.name);
+      return this.products.filter(p => p.category === category.name);
     }
     return this.products;
   }
