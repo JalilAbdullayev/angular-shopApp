@@ -8,7 +8,6 @@ export class AuthGuard implements CanActivate {
   }
 
   canActivate(): MaybeAsync<GuardResult> {
-    console.log('AuthGuard triggered');
     if (!this.authService.authenticated) {
       this.router.navigateByUrl('/admin/auth');
       return false;
