@@ -7,6 +7,7 @@ import {CategoryRepository} from "./category.repository";
 import {Cart} from "./cart.model";
 import {Order} from "./order.model";
 import {OrderRepository} from "./order.repository";
+import {AuthService} from "./auth.service";
 
 
 @NgModule({
@@ -15,7 +16,15 @@ import {OrderRepository} from "./order.repository";
     CommonModule,
     HttpClientModule
   ],
-  providers: [RestService, ProductRepository, CategoryRepository, Cart, Order, OrderRepository]
+  providers: [
+    RestService,
+    ProductRepository,
+    CategoryRepository,
+    Cart,
+    Order,
+    OrderRepository,
+    AuthService
+  ]
 })
 export class ModelModule {
 }

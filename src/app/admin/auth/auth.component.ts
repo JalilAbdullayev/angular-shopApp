@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
+import {AuthService} from "../../model/auth.service";
 
 @Component({
   selector: 'auth',
@@ -12,16 +13,17 @@ export class AuthComponent {
   public password: string;
   public errorMessage?: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthService) {
   }
 
   login(form: NgForm) {
     if (form.valid) {
-      if (this.username === 'admin' && this.password === 'admin') {
-        this.router.navigateByUrl('/admin/main');
-      } else {
+      this.authService.authenticate(this.username, this.password).subscribe(response => {
+        if (response) {
+          this.router.navigateByUrl('/admin/main');
+        }
         this.errorMessage = 'Username or password is incorrect';
-      }
+      })
     } else {
       this.errorMessage = 'Username or password is incorrect';
     }
